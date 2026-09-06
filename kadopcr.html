@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You</title>
+<style>
+  body{font-family:'Poppins',sans-serif;background:#1a1a2e;color:#fff;text-align:center;padding:20px}
+  .box{background:#16213e;padding:30px;border-radius:20px;max-width:400px;margin:50px auto;box-shadow:0 0 20px #e94560}
+  input{padding:10px;border-radius:10px;border:none;width:80%;margin:10px 0}
+  button{background:#e94560;color:#fff;border:none;padding:10px 20px;border-radius:10px;cursor:pointer}
+  .hidden{display:none}
+  img{width:100%;border-radius:15px;margin:10px 0}
+</style>
+</head>
+<body>
+
+<!-- HALAMAN 1: PASSWORD -->
+<div class="box" id="login">
+  <h1>🎁 For You</h1>
+  <p>Masukin kode rahasia dulu ya...</p>
+  <input type="password" id="310126" placeholder="Hint: 310126">
+  <br>
+  <button onclick="cekKode()">Buka Kado</button>
+</div>
+
+<!-- HALAMAN 2: ISI KADO -->
+<div class="box hidden" id="isi">
+  <h1>Happy Birthday [dian] 🎂</h1>
+  <img src="https://i.imgur.com/xxx.jpg" alt="foto kita"> <!-- GANTI LINK FOTO -->
+  
+  <h2>💌 A Letter For You</h2>
+  <p>Makasih udah jadi rumah paling nyaman buat aku. 
+  Makasih udah sabar sama aku, udah nemenin aku ketawa,
+  dan udah jadi alasan aku senyum tiap hari.
+  I love you more than yesterday, less than tomorrow ❤️</p>
+
+  <h2>🌸 10 Reasons I'm Grateful For You</h2>
+  <p>1. Bersyukur punya kamu yg selalu dengerin aku<br>
+ 2. Bersyukur sama cara kamu bikin aku ketawa<br>
+ 3. ...isi sendiri ya</p>
+
+  <h2>🎵 Playlist Buat Kamu</h2>
+  <a href="https://youtu.be/xxx" target="_blank">Klik di sini dengerin lagunya</a>
+</div>
+
+<script>
+function cekKode(){
+  let kode = document.getElementById("kode").value;
+  if(kode == "310126"){ // GANTI KODE DI SINI
+    document.getElementById("login").classList.add("hidden");
+    document.getElementById("isi").classList.remove("hidden");
+  }else{
+    alert("Kode salah 😢 Coba lagi ya");
+  }
+}
+</script>
+
+</body>
+</html>
